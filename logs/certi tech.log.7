@@ -1,0 +1,92 @@
+2023-08-14 09:50:44,963 ERROR: Exception on /aboutUs [GET] [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\main\routes.py", line 20, in aboutUs
+    return render_template('aboutUs.html',  title='About Us')
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\templates\aboutUs.html", line 64, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'.
+2023-08-14 09:53:21,407 ERROR: Exception on /aboutUs [GET] [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\main\routes.py", line 20, in aboutUs
+    return render_template('aboutUs.html',  title='About Us')
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\templates\aboutUs.html", line 64, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'.
+2023-08-14 09:53:24,998 ERROR: Exception on /aboutUs [GET] [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\main\routes.py", line 20, in aboutUs
+    return render_template('aboutUs.html',  title='About Us')
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\templates\aboutUs.html", line 64, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'.
+2023-08-14 09:54:25,458 INFO: Certi Tech startup [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\__init__.py:71]
+2023-08-14 09:59:03,592 INFO: Certi Tech startup [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\__init__.py:71]
+2023-08-14 10:01:52,388 INFO: Certi Tech startup [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\__init__.py:71]
+2023-08-14 10:17:29,159 INFO: Certi Tech startup [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\__init__.py:71]
+2023-08-14 10:36:59,975 INFO: Certi Tech startup [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\__init__.py:71]

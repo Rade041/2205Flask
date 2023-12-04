@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<h1>Course List</h1>
+<a href="{{ url_for('main.create_course', id=-1)}}">Add New Course</a>
+<div class="course_list">
+    {% for courses in course %}
+    <div class="course">
+        <h2>{{ course.title }}</h2>
+        <p>{{ course.description }}</p>
+
+        <p><a href="{{ url_for('main.create_course', id=course.id)}}">Edit course </a></p>
+    </div>
+    {% endfor%}
+</div>
+{% endblock %}

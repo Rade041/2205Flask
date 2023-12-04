@@ -1,0 +1,77 @@
+
+
+* {
+    -webkit-border-radius: 0 !important;
+       -moz-border-radius: 0 !important;
+            border-radius: 0 !important;
+}
+
+
+/*Footer Style*/
+footer { 
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: DarkSalmon;
+    color: white;
+    flex-direction: column;
+    display: flex;
+    flex: 1;
+    position: fixed;
+    bottom: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left:7.5px;
+    padding-right: 7.5px;
+} 
+
+
+/* Style for the address container */
+.container footerAddress {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+/* Style for the navigation links container */
+.container footerLinks {
+    display: flex;
+    /* Use flexbox to arrange the links horizontally */
+    justify-content: center;
+    /* Center the links horizontally */
+    margin-top: 15px;
+}
+
+
+/* Apply styles to the container of job listings */
+.job-listings {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Apply styles to each individual job listing */
+.jobs {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Style the title of each job listing */
+.jobs h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Style the description of each job listing */
+.jobs p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #666;
+}

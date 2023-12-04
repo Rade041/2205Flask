@@ -1,0 +1,128 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}
+{{ title }} | Certi Tech
+{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<link href="{{url_for('static', filename='styles.css')}}" rel="stylesheet">
+{% endblock %}
+
+<body>
+    {% block navbar %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+        
+            <div class="collapse navbar-collapse">
+                 <h1> <a> Certi Tech </a></h1> 
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('main.index') }}">Home</a></li>
+                    <li><a href="{{ url_for('main.faq') }}">FAQs</a></li>
+                    <li><a href="{{ url_for('main.pricing') }}">Pricing</a></li>
+
+                    {% if current_user.is_authenticated %}
+                        <li><a href="{{ url_for('main.jobs') }}">Jobs</a></li>
+                        <li><a href="{{ url_for('main.articles') }}">Articles</a></li>
+                        <li> <a href="{{ url_for('main.courses') }}"> Courses</a> </li>
+                    {% endif %}
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    {% if current_user.is_authenticated %}
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span class="glyphicon glyphicon-user"> </span> {{ current_user.username }}
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- Show links for signed-in users -->
+                            <li><a href="/notifications">Notifications</a></li>
+                            <li><a href="/search">Search</a></li>
+                            <li><a href="/faq">FAQ's</a></li>
+                            <li><a href="/account">Account</a></li>
+                            <li><a href="/edit_profile">Edit Profile</a></li>
+                            <li><a href="/settings">Settings</a></li>
+                            <li><a href="/manage_roles">Manage Roles</a></li>
+                            <li><a href="/courses"> Courses</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    </li>
+                    {% else %}
+                    <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+                    <li><a href="{{ url_for('auth.register') }}">Register</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+
+                {% block footer %}
+                <footer id="footer" aria-expanded="true" aria-posinset="text-center">
+                    <div class="container">
+                        <div class="footerAddress" id="footer">
+                            <address><br>Head Office
+                                <br>123 Wick Lane
+                                <br>London
+                                <br>L1 9P6
+                                <br> contact@certitech.com
+                                <br> +44 116 264 5943
+                            </address>
+                        </div>
+                    </div>
+                
+                
+                    <div class="container">
+                        <div id="footerLinks">
+                            <a href="{{ url_for('main.privacyPolicy') }}">Privacy Policy</a>
+                            <a href="{{ url_for('main.terms') }}">Terms</a>
+                            <a href="{{ url_for('main.corporate_sponsor') }}">Corporate Sponsor</a>
+                            <a href="{{ url_for('main.blog') }}">Blog</a>
+                            <a href="{{ url_for('main.aboutUs') }}">About Us</a>
+                        </div>
+                    </div>
+                </footer>
+                {% endblock %}
+       
+    </nav>
+    {% endblock %}
+
+    {% block content %}
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }} text-center">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">
+                <span aria-hidden="true">&times;</span>
+            </a>
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <div class="row">
+            {# application content needs to be provided in the app_content block #}
+            {% block app_content %}{% endblock %}
+        </div>
+    </div>
+
+    {% endblock %}
+
+
+
+    {% block scripts %}
+    {{ super() }}
+    <script type="text/javascript">
+        window.setTimeout(function () {
+            $(".alert").fadeTo(500, 0).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 3000);
+    </script>
+    {% endblock %}

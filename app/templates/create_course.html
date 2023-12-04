@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+<h1>Create a New Course</h1>
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    {{ wtf.form_field(form.title) }}
+    {{ wtf.form_field(form.course_leader) }}
+    {{ wtf.form_field(form.start_date) }} 
+    {{ wtf.form_field(form.end_date) }}
+    {{ wtf.form_field(form.venue_name_address) }}
+    {{ wtf.form_field(form.contact_phone) }}
+    {{ wtf.form_field(form.contact_email) }}
+    {{ wtf.form_field(form.body) }}
+    {{ wtf.form_field(form.submit) }}
+
+
+</form>
+{% endblock %}

@@ -1,0 +1,105 @@
+2023-08-14 10:37:03,093 ERROR: Exception on / [GET] [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\main\routes.py", line 16, in index
+    return render_template('index.html',  title='Home')
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\templates\base.html", line 1, in top-level template code
+    {% extends "bootstrap/base.html" %}
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\templates\base.html", line 27, in block 'navbar'
+    <li><a href="{{ url_for('main.help') }}">Help</a></li>
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\werkzeug\routing\map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.help'. Did you mean 'main.blog' instead?
+2023-08-14 10:37:53,571 INFO: Certi Tech startup [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\__init__.py:71]
+2023-08-14 10:37:56,341 ERROR: Exception on / [GET] [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\main\routes.py", line 16, in index
+    return render_template('index.html',  title='Home')
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\templates\base.html", line 1, in top-level template code
+    {% extends "bootstrap/base.html" %}
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\templates\base.html", line 27, in block 'navbar'
+    <li><a href="{{ url_for('main.help') }}">Help</a></li>
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\werkzeug\routing\map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.help'. Did you mean 'main.blog' instead?
+2023-08-14 10:42:51,915 INFO: Certi Tech startup [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\__init__.py:71]
+2023-08-14 10:45:08,007 INFO: Certi Tech startup [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\__init__.py:71]
+2023-08-14 10:51:32,031 INFO: Certi Tech startup [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\__init__.py:71]
+2023-08-14 11:04:03,628 INFO: Certi Tech startup [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\__init__.py:71]
+2023-08-14 11:34:30,738 INFO: Certi Tech startup [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\__init__.py:71]
+2023-08-14 11:37:16,085 INFO: Certi Tech startup [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\__init__.py:71]
+2023-08-14 13:24:03,439 INFO: Certi Tech startup [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\__init__.py:71]
+2023-08-14 14:13:26,742 INFO: Certi Tech startup [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\__init__.py:71]
+2023-08-14 14:16:36,720 INFO: Certi Tech startup [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\__init__.py:71]
+2023-08-14 14:16:46,959 ERROR: Exception on /course [GET] [in C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Eliza Lenjani\Desktop\2205FlaskNew\app\main\routes.py", line 208, in courses
+    course_list = courses.query.all()
+AttributeError: 'function' object has no attribute 'query'
